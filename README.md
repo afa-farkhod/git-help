@@ -1,8 +1,3 @@
-> [!NOTE]  
-> GitHub Markdown Guide 👉 [LINK](https://github.com/orgs/community/discussions/16925)
-
-----
-
 # git-help
 Git management and troubleshooting
 
@@ -148,3 +143,5 @@ git checkout 15f7fdec5xxxxxxxxxxxxxx -- roles/test/tasks/main.yaml
 - [Git documentation](https://git-scm.com/doc) - git main documentation
 - [GitHub CLI](https://github.com/cli/cli) - `gh` is GitHub on the command line. It brings pull requests, issues, and other GitHub concepts to the terminal next to where you are already working with git and your code.
 - [Git Markdown](https://github.com/orgs/community/discussions/16925) -  An option to highlight a "Note" and "Warning"
+> [!NOTE]  
+> GitHub Markdown Guide 👉 [LINK](https://github.com/orgs/community/discussions/16925)
