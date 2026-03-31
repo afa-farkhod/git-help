@@ -119,6 +119,35 @@ git checkout 15f7fdec5xxxxxxxxxxxxxx -- roles/test/tasks/main.yaml
 
 </details>
 
+<details>
+<summary> Git double (two) account usage in Mac Terminal</summary>
+<br>
+
+- first check which one is being used:
+```
+git config --global user.name
+git config --global user.email
+```
+
+- then, update the `.gitconfig` for second account details
+```
+vim ~/.gitconfig
+
+[credential]
+	helper = store
+[safe]
+	directory = /sources
+[user]
+	name = <YOUR_GIT_USER_NAME>
+	email = <YOUR_GIT_EMAIL_ADDRESS>
+[http]
+	postBuffer = 524288000
+[init]
+	defaultBranch = main
+```
+----
+
+</details>
 ## Git commands
 
 | Command | Description |
