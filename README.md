@@ -8,7 +8,10 @@ Git management and troubleshooting
 
 ## Troubleshooting
 
-- In case of changing the GitHub `PAT`(Private Access Token) (MacOS env) to keep further access the private repositories need to add the new PAT to `Key chain`
+<details>
+<summary> In case of changing the GitHub PAT(Private Access Token) (MacOS env) to keep further access the private repositories need to add the new PAT to Key chain</summary>
+<br>
+
 - Update Git credentials. Depending on your OS and how Git was configured your token may be stored in a credential manager or directly in the repository configuration.
   - For macOS:
     - The macOS Keychain usually manages GitHub credentials. You can update your token here:
@@ -70,8 +73,14 @@ git config --global credential.helper store
 
 - MacOS `Keychain`: macOS users can use the Keychain to securely store and manage passwords.
 
---------------------------------------------------------------------------------------------------------
-- Sometimes we want to clear the git commit history before making the repository public, in this case follow the instructions:
+------
+
+</details>
+
+<details>
+<summary> Sometimes we want to clear the git commit history before making the repository public, in this case follow the instructions:</summary>
+<br>
+
 ```
 rm -rf .git
 git config --global init.defaultBranch main
@@ -82,8 +91,14 @@ git commit -m "initial commit"
 git branch -M main
 git push -f origin main
 ```
---------------------------------------------------------------------------------------------------------
-- How to cherrypick particular blob from whole PR?
+------
+
+</details>
+
+<details>
+<summary> How to cherrypick particular blob from whole PR?</summary>
+<br>
+
 ```
 https://github.com/test/test-repo/blob/15f7fdec5xxxxxxxxxxxxxx/roles/test/tasks/main.yaml
 ```
@@ -94,13 +109,20 @@ git checkout 15f7fdec5xxxxxxxxxxxxxx -- roles/test/tasks/main.yaml
 ```
 - this pulls just that file from the commit into your current branch.
 - you can then `git add` and `git commit` it as part of your current work.
---------------------------------------------------------------------------------------------------------
+----
 
-- What is GitHub gist?
+</details>
+
+<details>
+<summary> What is GitHub gist?</summary>
+<br>
+
   - Gists provide a simple way to share code snippets with others. Every gist is a Git repository, which means that it can be forked and cloned [Guide Link](https://docs.github.com/en/get-started/writing-on-github/editing-and-sharing-content-with-gists/creating-gists).
   - If you are signed in to GitHub when you create a gist, the gist will be associated with your account and you will see it in your list of gists when you navigate to your [gist home page](https://gist.github.com/)
 
---------------------------------------------------------------------------------------------------------
+----
+
+</details>
 
 ## Git commands
 
