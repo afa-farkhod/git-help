@@ -148,6 +148,7 @@ vim ~/.gitconfig
 ----
 
 </details>
+
 ## Git commands
 
 | Command | Description |
