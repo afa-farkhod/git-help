@@ -149,6 +149,33 @@ vim ~/.gitconfig
 
 </details>
 
+<details>
+<summary> GitHub enforces a strict 100 MB limit per file for standard Git pushes, so uploading a 180 MB file requires using Git LFS (Large File Storage).</summary>
+<br>
+
+```
+# macOS:
+brew install git-lfs
+git lfs install
+git lfs track "path/to/large-file.ext"
+git add .gitattributes
+git add path/to/large-file.ext
+git commit -m "Add 180MB file using Git LFS"
+git push origin main
+
+# if the push fails because the file (115.76 MB) was committed into the local Git history as a standard Git blob before Git LFS was configured to track it. Standard Git is still trying to upload the raw file stored in the commit log.
+# Initialize Git LFS for the local repository:
+git lfs install
+git lfs migrate import --include="path/to/large-file"
+git push origin main
+
+# LFS badge appears when viewing the specific file directly in the repository code browser.
+```
+
+----
+
+</details>
+
 ## Git commands
 
 | Command | Description |
